@@ -1,10 +1,11 @@
+import Store from './services/Store.js'
+import { loadData } from './services/Menu.js'
+
+window.app = {}
+app.store = Store
+
 //It's better to wait for the event for manipulation
-window.addEventListener('DOMContentLoaded', () => {
-  let nav = document.querySelector('nav')
-  console.log(nav)
-  nav.innerHTML = `
-  <h2>Hello Dom</h2>
-  <p>How are you?</p>
-  `
-});
+window.addEventListener('DOMContentLoaded', async () => {
+  loadData()
+})
 
